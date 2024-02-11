@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
-}
+/* DatingApp.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dating-app {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh; /* Set height of container to viewport height */
+  align-items: center; /* Center vertically */
+  justify-content: space-around; /* Distribute columns evenly */
 }
 
-.App-link {
-  color: #61dafb;
+.column {
+  flex: 1; /* Equal width for all columns */
+  padding: 20px;
+  border: 1px solid #e81ebc;
+  background-color: #e497d3;
+  color: #f7f5f6;
+  font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
+  height: 450px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* .acceptance-rejection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.acceptance-rejection > div {
+  flex: 1;
+} */
+
+.number {
+  font-size: 50px; /* Adjust the font size as needed */
+  font-weight: bold; /* Optionally make the number bold */
+}
+
+.details {
+  font-size: 20px;
+}
+
+/* add more and buttons */
+
+.add-more {
+  text-align: center; /* Align the content to the center */
+}
+
+.add-more p {
+  margin-bottom: 5px; /* Add some space between the text and button */
+}
+
+.add-more button {
+  background-color: #e497d3; /* Baby pink background color */
+  color: #ff1493; /* Deep pink text color */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-more button:hover {
+  background-color: #ff1493; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+/*image*/
+
+.count-container {
+  display: flex;
+  align-items: center; /* Align items vertically in the container */
+  padding-left: 20px;
+}
+
+/* for hover */
+
+.image-container {
+  position: relative; /* Position the hover text relative to the container */
+  perspective: 1000px; /* Create the perspective effect */
+}
+
+.hover-text {
+  position: absolute; /* Position the text absolutely within the container */
+  top: 50%; /* Center the text vertically */
+  left: 50%; /* Center the text horizontally */
+  transform: translate(-50%, -50%); /* Center the text perfectly */
+  opacity: 0; /* Hide the text initially */
+  transition: opacity 0.3s ease; /* Add transition for smooth fade in/out */
+}
+
+.custom-image:hover + .hover-text {
+  opacity: 1; /* Show the text on hover */
+}
+
+.custom-image {
+  height: 150px; /* Adjust the height as needed */
+  width: 150px; /* Adjust the width as needed */
+  margin-left: 150px; /* Add spacing between the count and the image */
+  transition: transform 0.5s; /* Add transition for smooth flip effect */
+}
+
+.custom-image:hover {
+  transform: rotateY(180deg); /* Apply flip effect on hover */
+}
+
+.count-container:hover .hover-text {
+  opacity: 1; /* Show the text when the container is hovered */
+}
+
+.acceptance-image,
+.rejection-image {
+  height: 50px; /* Adjust the height as needed */
+  width: 50px; /* Adjust the width as needed */
+  margin-left: 50px; /* Add spacing between the count and the image */
+}
+
+.acceptance-section,
+.rejection-section {
+  margin-bottom: 10px; /* Reduce the spacing between acceptance and rejection sections */
 }
